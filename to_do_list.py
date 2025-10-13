@@ -24,7 +24,7 @@ def view_task():
 def mark_task():
     view_task()
     while True:
-        task_num = input("Type the task number to mark as completed: ")
+        task_num = input("Type the task number of the task to mark as completed: ")
         try:
             num = int(task_num)
             break
@@ -36,3 +36,19 @@ def mark_task():
     task = tasks[num - 1]
     task['Completed'] = True
     print(f"Task: {task['Task_Name']} has been marked as completed. ")
+
+#Function to delete task
+def delete_task():
+    view_task()
+    while True:
+        task_num = input("Type the task number of the task to delete: ")
+        try:
+            num = int(task_num)
+            break
+        except ValueError:
+            print("Task has to be a number")
+    while num > len(tasks):
+        print("Task not found. Enter a valid task number.")
+        num = int(input("Enter Task Number: "))
+    tasks.pop(num-1)
+    print('Task deleted successufully.')
