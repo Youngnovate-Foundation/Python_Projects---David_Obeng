@@ -1,5 +1,14 @@
 tasks = []
 
+#Function to load options
+def display_menu():
+    print("\nTo-Do List Application")
+    print("1. Add a new task")
+    print("2. View all tasks")
+    print("3. Mark a task as completed")
+    print("4. Delete a task")
+    print("5. Exit")
+
 #Function to store tasks
 def add_task():
     task_description = input('Input task description: ')
@@ -52,3 +61,4 @@ def delete_task():
         num = int(input("Enter Task Number: "))
     tasks.pop(num-1)
     print('Task deleted successufully.\n')
+
