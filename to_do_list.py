@@ -2,12 +2,12 @@ tasks = []
 
 #Function to load options
 def display_menu():
-    print("\nTo-Do List Application")
+    print("\nTo-Do List Main Menu")
     print("1. Add a new task")
     print("2. View all tasks")
     print("3. Mark a task as completed")
     print("4. Delete a task")
-    print("5. Exit")
+    print("5. Exit \n")
 
 #Function to store tasks
 def add_task():
@@ -62,3 +62,28 @@ def delete_task():
     tasks.pop(num-1)
     print('Task deleted successufully.\n')
 
+def main():
+    print("Hello. Welcome to the To-Do list Application.")
+
+    while True:
+
+        display_menu()
+        user_input = int(input('Enter your choice (1-5): '))
+        print('\n')
+
+        if user_input == 1:
+            add_task()
+        elif user_input == 2:
+            view_task()
+        elif user_input == 3:
+            mark_task()
+        elif user_input == 4:
+            delete_task()
+        elif user_input == 5:
+            print('Exiting the To-do list app.... See you later.')
+            break
+        else:
+            print("Invalid choice. Input numbers between 1 and 5")
+
+if __name__ == "__main__":
+    main()
