@@ -9,7 +9,7 @@ def add_task():
 
     task = {'Task_Name': task_description, 'Completed': False}
     tasks.append(task)
-    print(f'You have added {task_description} successfully.')
+    print(f'You have added {task_description} successfully. \n')
 
 #Function to view tasks
 def view_task():
@@ -35,7 +35,7 @@ def mark_task():
         num = int(input("Enter Task Number: "))
     task = tasks[num - 1]
     task['Completed'] = True
-    print(f"Task: {task['Task_Name']} has been marked as completed. ")
+    print(f"Task: {task['Task_Name']} has been marked as completed.\n")
 
 #Function to delete task
 def delete_task():
@@ -51,4 +51,4 @@ def delete_task():
         print("Task not found. Enter a valid task number.")
         num = int(input("Enter Task Number: "))
     tasks.pop(num-1)
-    print('Task deleted successufully.')
+    print('Task deleted successufully.\n')
