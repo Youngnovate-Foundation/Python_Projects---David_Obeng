@@ -1,5 +1,5 @@
 """
-    Password Generator
+    Password Generator App
     David Obeng Atiemo-Keseku
 
 """
